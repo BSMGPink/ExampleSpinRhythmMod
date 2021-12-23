@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Behaviours\ExampleMono.cs" />
+    <Compile Include="Handlers\ExampleHandler.cs" />
+    <Compile Include="Patches\ExamplePatches.cs" />
     <Compile Include="PluginInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Plugin.cs" />
@@ -45,10 +48,12 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
+    <Reference Include="0Harmony, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\steamapps\common\Spin Rhythm\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Steam\steamapps\common\Spin Rhythm\SpinRhythm_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
@@ -81,11 +86,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Behaviours\" />
     <Folder Include="Data\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="Images\" />
-    <Folder Include="Patches\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\ExampleImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

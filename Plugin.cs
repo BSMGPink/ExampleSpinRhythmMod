@@ -21,9 +21,12 @@ namespace ExampleMod
 
             // Init logs and patches.
             var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
 
+            harmony.PatchAll(typeof(ExamplePatches));
+        
+        
         }
+
 
         #region logging
         internal static void LogDebug(string message) => Instance.Log(message, LogLevel.Debug);
